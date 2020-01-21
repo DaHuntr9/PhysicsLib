@@ -197,7 +197,7 @@ public class KinematicEquationSolver implements CalculationTools{
         double solution;
 
         //Math for solving said problem	
-        solution = ((valueInitialVelocity * valueTimeOne) + (0.5 * valueAcc * (valueTimeTwo * valueTimeTwo));	
+        solution = ((valueInitialVelocity * valueTimeOne) + (0.5 * valueAcc * (valueTimeTwo * valueTimeTwo)));	
         return Double.toString(solution);
     }
 
