@@ -204,37 +204,89 @@ public class KinematicEquationSolver implements CalculationTools{
 
     /**
      * This section is for Linear Motion with constant acceleration.
-     * Equation: 
-     
+     * Equation: Vf^2 = Vi^2 + 2*a*d
+     */
 
-    public String findEquationLMnA(String arrayOfInputs[]){
+    /**
+     * 
+     * @param arrayOfInputs
+     * @return
+     */
+
+    public String findEquationLMnVF(String arrayOfInputs[]){
         switch(findBlankInArray(arrayOfInputs)){
-            case 0: return solveForTimeOneLMnA(arrayOfInputs);
-            case 1: return solveForTimeTwoLMnA(arrayOfInputs);
-            case 2: return solveForAccelerationLMcA(arrayOfInputs);
-            case 3: return solveForInitialVelocityLMcA(arrayOfInputs);
-            case 4: return solveForDistanceLMcA(arrayOfInputs);
+            case 0: return solveForInitialVelocityLMnVF(arrayOfInputs);
+            case 1: return solveForFinalVelocityLMnVF(arrayOfInputs);
+            case 2: return solveForAccelerationLMnVF(arrayOfInputs);
+            case 3: return solveForDistanceLMnVF(arrayOfInputs);
             default: return "Sorry please check your input.";
         }
      }
+    // //Conversions from EditText Object to double value.
+    // double initialVelocity = Double.parseDouble(arrayOfInputs[0]);	
+    // double finalVelocity = Double.parseDouble(arrayOfInputs[1]);
+    // double acceleration = Double.parseDouble(arrayOfInputs[2]);	
+    // double distance = Double.parseDouble(arrayOfInputs[3]);
+     
 
-    private String solveForTimeOneLMcA(String[] arrayOfInputs) {
-        return null;
-    }
-    private String solveForTimeTwoLMcA(String[] arrayOfInputs) {
-        return null;
+    private String solveForInitialVelocityLMnVF(String[] arrayOfInputs) {
+        //Conversions from EditText Object to double value.
+        //double initialVelocity = Double.parseDouble(arrayOfInputs[0]);
+        double finalVelocity = Double.parseDouble(arrayOfInputs[1]);
+        double acceleration = Double.parseDouble(arrayOfInputs[2]);	
+        double distance = Double.parseDouble(arrayOfInputs[3]);
+
+        //Data space for solution	
+        double solution;
+
+        //Math for solving said problem	
+        solution = Math.sqrt(((finalVelocity*finalVelocity)+((-1)*(2*acceleration*distance))));	
+        return Double.toString(solution);
     }
 
-    private String solveForAccelerationLMcA(String[] arrayOfInputs) {
-        return null;
+    private String solveForFinalVelocityLMnVF(String[] arrayOfInputs) {
+        //Conversions from EditText Object to double value.
+        double initialVelocity = Double.parseDouble(arrayOfInputs[0]);	
+        //double finalVelocity = Double.parseDouble(arrayOfInputs[1]);    //Not Used for this function. 
+        double acceleration = Double.parseDouble(arrayOfInputs[2]);	
+        double distance = Double.parseDouble(arrayOfInputs[3]);
+
+        //Data space for solution	
+        double solution;
+
+        //Math for solving said problem	
+        solution = Math.sqrt(((initialVelocity*initialVelocity)+(2*acceleration*distance)));	
+        return Double.toString(solution);
     }
 
-    private String solveForInitialVelocityLMcA(String[] arrayOfInputs) {
-        return null;
+    private String solveForAccelerationLMnVF(String[] arrayOfInputs) {
+        //Conversions from EditText Object to double value.
+        double initialVelocity = Double.parseDouble(arrayOfInputs[0]);	
+        double finalVelocity = Double.parseDouble(arrayOfInputs[1]);
+        //double acceleration = Double.parseDouble(arrayOfInputs[2]);    //Not Used for this function. 
+        double distance = Double.parseDouble(arrayOfInputs[3]);
+        
+        //Data space for solution	
+        double solution;
+        
+        //Math for solving said problem	
+        solution = (((finalVelocity*finalVelocity)*(initialVelocity*initialVelocity))/2*distance);	
+         return Double.toString(solution);
     }
 
-    private String solveForDistanceLMcA(String[] arrayOfInputs) {
-        return null;
+    private String solveForDistanceLMnVF(String[] arrayOfInputs) {
+        //Conversions from EditText Object to double value.
+        double initialVelocity = Double.parseDouble(arrayOfInputs[0]);	
+        double finalVelocity = Double.parseDouble(arrayOfInputs[1]);
+        double acceleration = Double.parseDouble(arrayOfInputs[2]);	
+        //double distance = Double.parseDouble(arrayOfInputs[3]);    //Not Used for this function. 
+        
+        //Data space for solution	
+        double solution;
+        
+        //Math for solving said problem	
+        solution = (((finalVelocity*finalVelocity)*(initialVelocity*initialVelocity))/2*acceleration);	
+         return Double.toString(solution);
     }
-    */
+    
 }
