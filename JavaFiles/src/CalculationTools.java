@@ -1,4 +1,4 @@
-package JavaFiles;
+package JavaFiles.src;
 
 /**	
  * This CalculationTools is a interface for all other classes to inherit shared functions. 	

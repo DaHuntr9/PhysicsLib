@@ -1,4 +1,4 @@
-package JavaFiles;
+package JavaFiles.src;
 
 /**	
  * Kinematic Equation Solver to solve equations.
@@ -23,7 +23,7 @@ public class KinematicEquationSolver implements CalculationTools{
      * 4. Final Velocity
      * @return String with the calculated result or error message.
      */	
-    public String findEquationLMnD(String arrayOfInputs[]){
+    public String findEquationLMnD(String[] arrayOfInputs){
         switch(findBlankInArray(arrayOfInputs)){
             case 0: return solveForTimeLMnD(arrayOfInputs);
             case 1: return solveForAccelerationLMnD(arrayOfInputs);
@@ -41,7 +41,7 @@ public class KinematicEquationSolver implements CalculationTools{
      * the equation.
      * @return String, solution to Equation	
      */	
-    public String solveForFinalVelocityLMnD(String arrayOfInputs[]){	
+    public String solveForFinalVelocityLMnD(String[] arrayOfInputs){
         //Conversions from String to Double.	
         double time = Double.parseDouble(arrayOfInputs[0]);
         double acceleration = Double.parseDouble(arrayOfInputs[1]);		
@@ -60,7 +60,7 @@ public class KinematicEquationSolver implements CalculationTools{
      * the equation.
      * @return String, solution to Equation	
      */	
-    public String solveForInitialVelocityLMnD(String arrayOfInputs[]){	
+    public String solveForInitialVelocityLMnD(String[] arrayOfInputs){
         //Conversions from String to Double.	
         double time = Double.parseDouble(arrayOfInputs[0]);	
         double acceleration = Double.parseDouble(arrayOfInputs[1]);	
@@ -79,7 +79,7 @@ public class KinematicEquationSolver implements CalculationTools{
      * the equation.
      * @return String, solution to Equation	
      */	
-    public String solveForTimeLMnD(String arrayOfInputs[]){	
+    public String solveForTimeLMnD(String[] arrayOfInputs){
         //Conversions from String to Double.	
         double acceleration = Double.parseDouble(arrayOfInputs[1]);	
         double initialVelocity = Double.parseDouble(arrayOfInputs[2]);	
@@ -98,7 +98,7 @@ public class KinematicEquationSolver implements CalculationTools{
      * the equation.
      * @return String, solution to Equation	
      */	
-    public String solveForAccelerationLMnD(String arrayOfInputs[]){	
+    public String solveForAccelerationLMnD(String[] arrayOfInputs){
         //Conversions from String to Double.	
         double time = Double.parseDouble(arrayOfInputs[0]);
         double initialVelocity = Double.parseDouble(arrayOfInputs[2]);	
@@ -127,7 +127,7 @@ public class KinematicEquationSolver implements CalculationTools{
      * 5. Distance
      * @return String with the calculated result or error message.	
      */	
-     public String findEquationLMcA(String arrayOfInputs[]){
+     public String findEquationLMcA(String[] arrayOfInputs){
         switch(findBlankInArray(arrayOfInputs)){
             case 0: return solveForTimeOneLMcA(arrayOfInputs);
             case 1: return solveForTimeTwoLMcA(arrayOfInputs);
@@ -261,7 +261,7 @@ public class KinematicEquationSolver implements CalculationTools{
      * 4. Distance
      * @return String with the calculated result or error message.	
      */	
-    public String findEquationLMnVF(String arrayOfInputs[]){
+    public String findEquationLMnVF(String[] arrayOfInputs){
         switch(findBlankInArray(arrayOfInputs)){
             case 0: return solveForInitialVelocityLMnVF(arrayOfInputs);
             case 1: return solveForFinalVelocityLMnVF(arrayOfInputs);
@@ -369,7 +369,7 @@ public class KinematicEquationSolver implements CalculationTools{
      * 4. Final Velocity
      * @return String with the calculated result or error message.	
      */	
-    public String findEquationLMnA(String arrayOfInputs[]){
+    public String findEquationLMnA(String[] arrayOfInputs){
         switch(findBlankInArray(arrayOfInputs)){
             case 0: return solveForTimeLMnA(arrayOfInputs);
             case 1: return solveForDistanceLMnA(arrayOfInputs);

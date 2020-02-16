@@ -1,4 +1,4 @@
-package JavaFiles;
+package JavaFiles.src;
 
 /**	
  * Projectile Motion Equation Solver to solve 2-D projectile motion equations.
