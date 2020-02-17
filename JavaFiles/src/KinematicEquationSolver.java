@@ -145,8 +145,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForTimeOneLMcA(String[] arrayOfInputs) {
+     */
+    public String solveForTimeOneLMcA(String[] arrayOfInputs) {
         //Conversions from String to Double.
         //double TimeOne = Double.parseDouble(arrayOfInputs[0]);	
         double TimeTwo = Double.parseDouble(arrayOfInputs[1]);
@@ -166,8 +166,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForTimeTwoLMcA(String[] arrayOfInputs) {
+     */
+    public String solveForTimeTwoLMcA(String[] arrayOfInputs) {
         //Conversions from String to Double.
         double timeOne = Double.parseDouble(arrayOfInputs[0]);	
         //double timeTwo = Double.parseDouble(arrayOfInputs[1]); //Not Used for this funtion.
@@ -187,8 +187,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForAccelerationLMcA(String[] arrayOfInputs) {
+     */
+    public String solveForAccelerationLMcA(String[] arrayOfInputs) {
         //Conversions from String to Double.
         double timeOne = Double.parseDouble(arrayOfInputs[0]);
         double timeTwo = Double.parseDouble(arrayOfInputs[1]);
@@ -208,8 +208,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForInitialVelocityLMcA(String[] arrayOfInputs) {
+     */
+    public String solveForInitialVelocityLMcA(String[] arrayOfInputs) {
         //Conversions from String to Double.
         double timeOne = Double.parseDouble(arrayOfInputs[0]);
         double timeTwo = Double.parseDouble(arrayOfInputs[1]);
@@ -229,8 +229,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForDistanceLMcA(String[] arrayOfInputs) {
+     */
+    public String solveForDistanceLMcA(String[] arrayOfInputs) {
         //Conversions from String to Double.
         double timeOne = Double.parseDouble(arrayOfInputs[0]);
         double timeTwo = Double.parseDouble(arrayOfInputs[1]);
@@ -278,8 +278,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForInitialVelocityLMnVF(String[] arrayOfInputs) {
+     */
+    public String solveForInitialVelocityLMnVF(String[] arrayOfInputs) {
         //Conversions from String to Double.
         //double initialVelocity = Double.parseDouble(arrayOfInputs[0]);
         double finalVelocity = Double.parseDouble(arrayOfInputs[1]);
@@ -298,8 +298,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForFinalVelocityLMnVF(String[] arrayOfInputs) {
+     */
+    public String solveForFinalVelocityLMnVF(String[] arrayOfInputs) {
         //Conversions from String to Double.
         double initialVelocity = Double.parseDouble(arrayOfInputs[0]);	
         //double finalVelocity = Double.parseDouble(arrayOfInputs[1]);    //Not Used for this function. 
@@ -318,8 +318,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForAccelerationLMnVF(String[] arrayOfInputs) {
+     */
+    public String solveForAccelerationLMnVF(String[] arrayOfInputs) {
         //Conversions from String to Double.
         double initialVelocity = Double.parseDouble(arrayOfInputs[0]);	
         double finalVelocity = Double.parseDouble(arrayOfInputs[1]);
@@ -338,8 +338,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForDistanceLMnVF(String[] arrayOfInputs) {
+     */
+    public String solveForDistanceLMnVF(String[] arrayOfInputs) {
         //Conversions from String to Double.
         double initialVelocity = Double.parseDouble(arrayOfInputs[0]);	
         double finalVelocity = Double.parseDouble(arrayOfInputs[1]);
@@ -386,8 +386,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForTimeLMnA(String[] arrayOfInputs) {
+     */
+    public  String solveForTimeLMnA(String[] arrayOfInputs) {
         //Conversions from String to Double.
         //double time = Double.parseDouble(arrayOfInputs[0]);   //Not Used for this function.
         double distance = Double.parseDouble(arrayOfInputs[1]); 
@@ -406,8 +406,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForDistanceLMnA(String[] arrayOfInputs) {
+     */
+    public  String solveForDistanceLMnA(String[] arrayOfInputs) {
         //Conversions from String to Double.
         double time = Double.parseDouble(arrayOfInputs[0]);	
         //double distance = Double.parseDouble(arrayOfInputs[1]);    //Not Used for this function. 
@@ -426,8 +426,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForInitialVelocityLMnA(String[] arrayOfInputs) {
+     */
+    public  String solveForInitialVelocityLMnA(String[] arrayOfInputs) {
         //Conversions from String to Double.
         double time = Double.parseDouble(arrayOfInputs[0]);	
         double distance = Double.parseDouble(arrayOfInputs[1]);
@@ -446,8 +446,8 @@ public class KinematicEquationSolver implements CalculationTools{
      * @param arrayOfInputs is the array of all the inputs that the user provided in order to solve
      * the equation.
      * @return String, solution to Equation	
-     */	
-    private String solveForFinalVelocityLMnA(String[] arrayOfInputs) {
+     */
+    public  String solveForFinalVelocityLMnA(String[] arrayOfInputs) {
         //Conversions from String to Double.
         double time = Double.parseDouble(arrayOfInputs[0]);	
         double distance = Double.parseDouble(arrayOfInputs[1]); 

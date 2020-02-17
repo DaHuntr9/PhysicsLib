@@ -27,13 +27,13 @@ interface CalculationTools {
      *                      order to solve the equation.
      * @return int either location in the array or -1.
      */
-    default int findBlankInArray(String arrayOfInputs[]) {
+    default int findBlankInArray(String[] arrayOfInputs) {
         int counter = 0;
         int numberOfBlanks = 0;
         int locationOfBlanks = -1; // Always set to false.
 
         while (counter < arrayOfInputs.length) {
-            if (arrayOfInputs[counter] == "") {
+            if (arrayOfInputs[counter].equals("")) {
                 numberOfBlanks += 1;
                 locationOfBlanks = counter;
             }
